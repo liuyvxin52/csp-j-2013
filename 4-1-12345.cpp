@@ -1,12 +1,12 @@
-#include<bits/stdc++.h>
-using namespace std;
+//#include<bits/stdc++.h>
+//using namespace std;
 /*
 1.  完善程序： （序列重排）
     全局数组变量 a 定义如下：
 */
 const int SIZE = 100;
 int a[SIZE], n;
-int s;
+//int s;
 /*
     它记录着一个长度为n 的序列 a[1], a[2], ⋯ , a[n]。
     现在需要一个函数，以整数p (1 <=p <=n) 为参数，实现如下功能：
@@ -35,7 +35,7 @@ void swap2( int p )
 		/*5->*/a[i-p]/*<-5*/ = temp;
 	}
 }
-
+/*
 int main()
 {
     int bf[SIZE];
@@ -58,3 +58,12 @@ int main()
         cout << a[i] << " ";
     }
 }
+*/
+/*
+    参考答案：
+    n-p+i
+    a[i]
+    n
+    i-p+1
+    a[i-p]
+*/
