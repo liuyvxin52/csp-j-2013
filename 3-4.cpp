@@ -1,0 +1,31 @@
+//4.
+#include <iostream> 
+using namespace std;
+int main()
+{
+    const int SIZE = 100;
+    int height[SIZE], num[SIZE], n, ans;
+    cin>>n;
+    for (int i = 0; i < n; i++) 
+       { 
+          cin>>height[i]; num[i] = 1;
+          for (int j = 0; j < i; j++) 
+             {
+                if ((height[j] < height[i]) && (num[j] >= num[i]))
+                    num[i] = num[j]+1;
+             }
+       }
+    ans = 0;
+    for (int i = 0; i < n; i++)
+       { 
+          if (num[i] > ans) ans = num[i];
+       }
+    cout<<ans<<endl;
+}
+/*
+输入：
+     6
+     2 5 3 11 12 4
+输出：_________
+参考答案：4
+*/
